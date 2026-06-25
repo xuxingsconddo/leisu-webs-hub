@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雷速 · 稳定入口说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #fafbfc;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #1d2b3a;
+      line-height: 1.7;
+      padding: 2rem 1.2rem;
+    }
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    /* hero */
+    .hero {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 550;
+      letter-spacing: -0.01em;
+      color: #0b1c2f;
+      line-height: 1.3;
+    }
+    .hero .sub {
+      margin-top: 0.75rem;
+      font-size: 1.1rem;
+      color: #435a6f;
+      max-width: 520px;
+    }
+    .hero .meta-note {
+      margin-top: 1.4rem;
+      font-size: 0.9rem;
+      color: #7b8fa1;
+      border-left: 3px solid #c7d4df;
+      padding-left: 1rem;
+    }
+    /* 优势区 — 极简卡片列表 */
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin: 2.8rem 0;
+    }
+    .benefit-item {
+      background: #ffffff;
+      padding: 1.2rem 0.8rem 1rem 1.2rem;
+      border-radius: 14px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e9edf0;
+      transition: box-shadow 0.2s;
+    }
+    .benefit-item:hover {
+      box-shadow: 0 4px 12px rgba(0, 20, 40, 0.04);
+    }
+    .benefit-item h3 {
+      font-size: 1.05rem;
+      font-weight: 550;
+      margin-bottom: 0.3rem;
+      color: #162b3d;
+    }
+    .benefit-item p {
+      font-size: 0.9rem;
+      color: #496075;
+      line-height: 1.5;
+    }
+    /* 说明区 (引导) */
+    .section-block {
+      margin: 3rem 0;
+    }
+    .section-block h2 {
+      font-size: 1.5rem;
+      font-weight: 540;
+      margin-bottom: 0.6rem;
+      color: #0b1c2f;
+      letter-spacing: -0.01em;
+    }
+    .section-block p {
+      margin-bottom: 1rem;
+      color: #2f445a;
+    }
+    .section-block p a {
+      color: #1f6390;
+      text-decoration: none;
+      border-bottom: 1px solid #bdd3e4;
+      transition: border-color 0.2s;
+    }
+    .section-block p a:hover {
+      border-bottom-color: #1f6390;
+    }
+    /* FAQ 摘要 — 简洁问答 */
+    .faq-summary {
+      margin: 3.2rem 0 1.8rem 0;
+      border-top: 1px solid #dfe6ec;
+      padding-top: 2rem;
+    }
+    .faq-summary h2 {
+      font-size: 1.2rem;
+      font-weight: 530;
+      margin-bottom: 1.2rem;
+      color: #1d2b3a;
+    }
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+    .faq-question {
+      font-weight: 520;
+      color: #0f2b40;
+      margin-bottom: 0.1rem;
+      font-size: 0.98rem;
+    }
+    .faq-answer {
+      font-size: 0.9rem;
+      color: #4b6379;
+    }
+    /* 底部链接 */
+    .footer-note {
+      margin: 3.8rem 0 2rem 0;
+      padding-top: 1.2rem;
+      border-top: 1px solid #dfe6ec;
+      font-size: 0.85rem;
+      color: #6b8094;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-note .site-link {
+      font-weight: 500;
+    }
+    .footer-note a {
+      color: #1d2b3a;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+    .footer-note a:hover {
+      border-bottom-color: #7b8b9b;
+    }
+    .footer-note .meta {
+      color: #8599ac;
+    }
+    /* 响应式调整 */
+    @media (max-width: 500px) {
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .benefit-grid {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+      }
+      body {
+        padding: 1.2rem 0.9rem;
+      }
+      .hero .sub {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>稳定入口 · 页面说明</h1>
+    <div class="sub">从访问到使用的路径尽量简洁，每一层都留有适当的提示。</div>
+    <div class="meta-note">无论使用场景如何变化，一个可靠的起点能减少不必要的选择。这里整理了几处常见的理解和操作位置。</div>
+  </div>
+
+  <!-- 优势区：轻量卡片 -->
+  <div class="benefit-grid">
+    <div class="benefit-item">
+      <h3>入口简洁</h3>
+      <p>减少跳转层级，页面直接指向你需要的板块，不用反复猜测路径。</p>
+    </div>
+    <div class="benefit-item">
+      <h3>标识清晰</h3>
+      <p>功能与内容区域有视觉区分，避免因布局混淆导致误操作。</p>
+    </div>
+    <div class="benefit-item">
+      <h3>响应及时</h3>
+      <p>页面轻量，加载过程稳定，适合不同网络环境下的日常使用。</p>
+    </div>
+    <div class="benefit-item">
+      <h3>连贯体验</h3>
+      <p>从首页到具体内容之间保持一致的风格，减少重新适应成本。</p>
+    </div>
+  </div>
+
+  <!-- 说明区：页面指向 -->
+  <div class="section-block">
+    <h2>关于访问入口</h2>
+    <p>
+      在浏览器地址栏直接输入或通过收藏夹访问，是许多用户最习惯的方式。如果你希望用一个固定的地址作为起点，可以直接使用 <a href="https://leisu-webs-sport.com">雷速</a> 作为导航基点。该页面提供了主要功能区域的索引，以及常见问题与提示。
+    </p>
+    <p>
+      页面结构按照信息层级组织，尽量避免冗余的指引。每个模块的标题和描述都经过筛选，目的是让新访问者能够快速定位自己需要的内容，而不必逐字阅读所有段落。
+    </p>
+  </div>
+
+  <!-- 场景/提示 (温和) -->
+  <div class="section-block" style="margin-top: 1.8rem;">
+    <p style="background: #f0f4f9; padding: 1rem 1.4rem; border-radius: 12px; font-size: 0.95rem;">
+      <span style="font-weight: 500; color:#1d374a;">小提示：</span>
+      如果你希望减少每次查找的时间，可以将常用页面加入浏览器书签。当遇到页面加载缓慢或地址变更时，建议先核对域名是否与你记忆中的一致，避免误入类似名称的网站。
+    </p>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-summary">
+    <h2>常见疑问 · 简短说明</h2>
+    <div class="faq-item">
+      <div class="faq-question">页面上的链接指向哪里？</div>
+      <div class="faq-answer">所有链接均在当前站点内部或指向设定好的外部资源，没有隐藏跳转。主入口使用 <a href="https://leisu-webs-sport.com" style="color:#1f6390; text-decoration: underline;">雷速</a> 作为固定标识。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">是否需要注册或登录？</div>
+      <div class="faq-answer">本页仅作为介绍和入口说明，不涉及账户系统。具体使用取决于后续页面的功能定义。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">内容多久更新一次？</div>
+      <div class="faq-answer">信息维护周期不固定，但重要变更会同步更新到页面的显著位置。建议偶尔回看以确保入口有效。</div>
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer-note">
+    <span class="site-link"><a href="https://leisu-webs-sport.com">雷速</a> · 稳定入口</span>
+    <span class="meta">页面说明 · 简洁访问</span>
+  </div>
+
+</div>
+</body>
+</html>
